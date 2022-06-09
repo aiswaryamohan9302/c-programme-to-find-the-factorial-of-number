@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+class factorial
+{
+     private:int num ;
+             int factorial=1;
+             
+     public:void calc();
+            void display();
+            
+     
+};
+
+void factorial::calc()
+{
+     cout<<"enter the number:";
+     cin>>num;
+     if(num==0||num==1)
+     {
+         factorial=1;
+     }
+     else
+     {
+         while(num>1)
+         {
+              factorial=factorial*num;
+              num--;
+         }
+     
+         
+     }
+}
+void factorial::display()
+{
+     cout<<"factorial:"<<factorial;
+}
+int main()
+{
+    factorial factorial;
+    factorial.calc();
+    factorial.display();
+}
+
